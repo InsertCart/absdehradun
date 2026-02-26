@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Achiever Building Solution</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-poppins">
+
+    <nav class="fixed w-full z-50 top-0 bg-white/95 backdrop-blur-md shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tight">
+                <span class="text-amber-500">ABS</span> DEHRADUN
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="index.html" class="text-gray-800 hover:text-amber-500 transition">Home</a>
+                <a href="about.html" class="text-gray-800 hover:text-amber-500 transition">About</a>
+                <a href="services.html" class="text-gray-800 hover:text-amber-500 transition">Services</a>
+                <a href="gallery.html" class="text-gray-800 hover:text-amber-500 transition">Gallery</a>
+                <a href="contact.html" class="text-gray-800 hover:text-amber-500 transition font-bold">Contact</a>
+            </div>
+            <a href="tel:+919759078323" class="bg-amber-500 text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-amber-600 transition transform hover:scale-105">CALL NOW</a>
+        </div>
+    </nav>
+
+    <section class="pt-24 pb-12">
+        <div class="max-w-4xl mx-auto px-6">
+            <h1 class="text-3xl font-bold mb-2">Contact Us</h1>
+            <p class="text-gray-600 mb-6">Send us a message and we'll get back to you promptly.</p>
+
+            <div class="bg-white shadow rounded-lg p-6">
+                <form id="contactForm" class="grid grid-cols-1 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Name</label>
+                        <input required name="name" class="w-full border border-gray-200 rounded px-3 py-2" placeholder="Your full name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Email</label>
+                        <input required type="email" name="email" class="w-full border border-gray-200 rounded px-3 py-2" placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Phone</label>
+                        <input type="tel" name="phone" class="w-full border border-gray-200 rounded px-3 py-2" placeholder="Mobile number">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Message</label>
+                        <textarea name="message" rows="5" class="w-full border border-gray-200 rounded px-3 py-2" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button type="submit" class="bg-amber-500 text-white px-6 py-2 rounded-full font-bold">Send Message</button>
+                        <div class="text-sm text-gray-500">Or call us: <a href="tel:+919759078323" class="text-amber-500">+91 97590 78323</a></div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="mt-6 bg-white shadow rounded-lg p-4">
+                <h3 class="font-semibold mb-2">Our Location</h3>
+                <iframe class="w-full h-64 rounded" src="https://www.google.com/maps/embed?pb=!1m18!..." loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-500">© 2024 Achiever Building Solution Pvt. Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            alert('Thanks! Your message has been sent.');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>

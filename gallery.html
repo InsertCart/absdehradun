@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Achiever Building Solution</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-poppins">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 top-0 bg-white/95 backdrop-blur-md shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tight">
+                <span class="text-amber-500">ABS</span> DEHRADUN
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="index.html" class="text-gray-800 hover:text-amber-500 transition">Home</a>
+                <a href="about.html" class="text-gray-800 hover:text-amber-500 transition">About</a>
+                <a href="services.html" class="text-gray-800 hover:text-amber-500 transition">Services</a>
+                <a href="gallery.html" class="text-gray-800 hover:text-amber-500 transition font-bold">Gallery</a>
+                <a href="contact.html" class="text-gray-800 hover:text-amber-500 transition">Contact</a>
+            </div>
+            <a href="tel:+919759078323" class="bg-amber-500 text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-amber-600 transition transform hover:scale-105">CALL NOW</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="pt-24 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <h1 class="text-4xl font-bold mb-2">Gallery</h1>
+            <p class="text-gray-600 mb-6">Explore our projects and premium properties.</p>
+
+            <div class="flex flex-wrap gap-3 mb-6">
+                <button onclick="filterGallery('all')" class="px-4 py-2 rounded-full bg-amber-500 text-white">All</button>
+                <button onclick="filterGallery('residential')" class="px-4 py-2 rounded-full border border-amber-500 text-amber-500">Residential</button>
+                <button onclick="filterGallery('commercial')" class="px-4 py-2 rounded-full border border-amber-500 text-amber-500">Commercial</button>
+                <button onclick="filterGallery('luxury')" class="px-4 py-2 rounded-full border border-amber-500 text-amber-500">Luxury</button>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4" id="galleryGrid">
+                <!-- images inserted by inline markup below; JS builds galleryImages array from these -->
+                <div class="gallery-item" data-category="residential"><button onclick="openLightboxByIndex(0)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80" class="w-full h-48 object-cover" alt="Residential 1"></button></div>
+                <div class="gallery-item" data-category="residential"><button onclick="openLightboxByIndex(1)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80" class="w-full h-48 object-cover" alt="Residential 2"></button></div>
+                <div class="gallery-item" data-category="residential"><button onclick="openLightboxByIndex(2)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" class="w-full h-48 object-cover" alt="Residential 3"></button></div>
+                <div class="gallery-item" data-category="residential"><button onclick="openLightboxByIndex(3)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1494696704231-cd4194ecbf43?w=800&q=80" class="w-full h-48 object-cover" alt="Residential 4"></button></div>
+
+                <div class="gallery-item" data-category="commercial"><button onclick="openLightboxByIndex(4)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" class="w-full h-48 object-cover" alt="Commercial 1"></button></div>
+                <div class="gallery-item" data-category="commercial"><button onclick="openLightboxByIndex(5)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1497366216548-11d1ab9bb79c?w=800&q=80" class="w-full h-48 object-cover" alt="Commercial 2"></button></div>
+                <div class="gallery-item" data-category="commercial"><button onclick="openLightboxByIndex(6)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1462353867552-fcd57e0c1f52?w=800&q=80" class="w-full h-48 object-cover" alt="Commercial 3"></button></div>
+
+                <div class="gallery-item" data-category="luxury"><button onclick="openLightboxByIndex(7)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" class="w-full h-48 object-cover" alt="Luxury 1"></button></div>
+                <div class="gallery-item" data-category="luxury"><button onclick="openLightboxByIndex(8)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1600566753086-00f18a6505f5?w=800&q=80" class="w-full h-48 object-cover" alt="Luxury 2"></button></div>
+                <div class="gallery-item" data-category="luxury"><button onclick="openLightboxByIndex(9)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" class="w-full h-48 object-cover" alt="Luxury 3"></button></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX (single, controlled by JS) -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+        <button aria-label="previous" id="lb-prev" class="absolute left-6 text-white text-4xl p-3" onclick="changeLightboxImage(-1)">❮</button>
+        <img id="lightbox-img" src="" alt="" class="max-w-4xl max-h-[85vh] rounded-lg shadow-2xl">
+        <button aria-label="next" id="lb-next" class="absolute right-6 text-white text-4xl p-3" onclick="changeLightboxImage(1)">❯</button>
+        <button aria-label="close" id="lb-close" class="absolute top-6 right-6 text-white text-3xl" onclick="closeLightbox()">✕</button>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-500">© 2024 Achiever Building Solution Pvt. Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Build image array (keeps a single source of truth for lightbox)
+        const galleryImages = Array.from(document.querySelectorAll('#galleryGrid img')).map(img => img.src);
+        let currentImageIndex = 0;
+
+        function openLightboxByIndex(index) {
+            currentImageIndex = index;
+            const lb = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = galleryImages[index];
+            lb.classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox');
+            lb.classList.add('hidden');
+            document.getElementById('lightbox-img').src = '';
+        }
+
+        function changeLightboxImage(direction) {
+            currentImageIndex = (currentImageIndex + direction + galleryImages.length) % galleryImages.length;
+            document.getElementById('lightbox-img').src = galleryImages[currentImageIndex];
+        }
+
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach((item, idx) => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox' || e.target.id === 'lb-close') closeLightbox();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            const lb = document.getElementById('lightbox');
+            if (lb && !lb.classList.contains('hidden')) {
+                if (e.key === 'ArrowLeft') changeLightboxImage(-1);
+                if (e.key === 'ArrowRight') changeLightboxImage(1);
+                if (e.key === 'Escape') closeLightbox();
+            }
+        });
+    </script>
+
+</body>
+</html>
