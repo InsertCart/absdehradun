@@ -1,126 +1,406 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Achiever Building Solution</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-900 font-poppins">
+    <meta name="description" content="Browse the Achiever Building Solution gallery showcasing residential plots, commercial developments, and verified properties across Dehradun.">
+    <meta name="keywords" content="property gallery Dehradun, real estate projects, residential plots gallery, commercial property images, Achiever Building Solution">
+    <meta name="author" content="Achiever Building Solution">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a0a">
 
-    <!-- NAVIGATION -->
-    <nav class="fixed w-full z-50 top-0 bg-white/95 backdrop-blur-md shadow-md">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tight">
-                <span class="text-amber-500">ABS</span> DEHRADUN
-            </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
-                <a href="index.html" class="text-gray-800 hover:text-amber-500 transition">Home</a>
-                <a href="about.html" class="text-gray-800 hover:text-amber-500 transition">About</a>
-                <a href="services.html" class="text-gray-800 hover:text-amber-500 transition">Services</a>
-                <a href="gallery.html" class="text-gray-800 hover:text-amber-500 transition font-bold">Gallery</a>
-                <a href="contact.html" class="text-gray-800 hover:text-amber-500 transition">Contact</a>
-            </div>
-            <a href="tel:+919759078323" class="bg-amber-500 text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-amber-600 transition transform hover:scale-105">CALL NOW</a>
-        </div>
+    <title>Gallery | Achiever Building Solution</title>
+    <link rel="canonical" href="gallery.html">
+
+    <meta property="og:title" content="Gallery | Achiever Building Solution">
+    <meta property="og:description" content="Browse the Achiever Building Solution gallery showcasing residential plots, commercial developments, and verified properties across Dehradun.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Achiever Building Solution">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:url" content="gallery.html">
+    <meta property="og:image" content="img/logo.webp">
+    <meta property="og:image:alt" content="Achiever Building Solution logo">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gallery | Achiever Building Solution">
+    <meta name="twitter:description" content="Browse the Achiever Building Solution gallery showcasing residential plots, commercial developments, and verified properties across Dehradun.">
+    <meta name="twitter:image" content="img/logo.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/logo.webp">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --gold: #c9a84c; --gold-light: #e2c47a; --black: #0a0a0a; --dark: #111111; --dark2: #1a1a1a; --dark3: #222222; --white: #ffffff; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(--white); overflow-x: hidden; cursor: none; }
+        .cursor { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transition: transform 0.1s; }
+        .cursor-ring { width: 32px; height: 32px; border: 1px solid var(--gold); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; transition: all 0.15s ease; opacity: 0.6; }
+        nav { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 24px 60px; display: flex; align-items: center; justify-content: space-between; background: rgba(10,10,10,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(201,168,76,0.15); }
+        .nav-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            color: var(--gold);
+            text-transform: uppercase;
+            display: flex;
+    align-items: center;
+    gap: 4px;
+        }
+        .nav-logo img {
+    height: 60px;
+}
+        .nav-logo span { color: var(--white); }
+        .nav-links { display: flex; gap: 40px; list-style: none; }
+        .nav-links a { font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s; position: relative; }
+        .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        .nav-cta { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--black); background: var(--gold); padding: 12px 28px; text-decoration: none; font-weight: 500; transition: all 0.3s; }
+        .nav-cta:hover { background: var(--gold-light); }
+
+        .page-hero { min-height: 60vh; display: flex; align-items: flex-end; padding: 0 60px 80px; position: relative; overflow: hidden; background: var(--dark); }
+        .page-hero::before { content: 'GALLERY'; position: absolute; font-family: 'Cormorant Garamond', serif; font-size: 260px; font-weight: 700; color: rgba(255,255,255,0.02); top: 50%; left: 50%; transform: translate(-50%, -40%); white-space: nowrap; pointer-events: none; }
+        .page-hero-line { position: absolute; top: 0; left: 60px; width: 1px; height: 100%; background: linear-gradient(to bottom, transparent, rgba(201,168,76,0.3), transparent); }
+        .page-eyebrow { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; gap: 16px; }
+        .page-eyebrow::before { content: ''; width: 40px; height: 1px; background: var(--gold); }
+        .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(52px, 7vw, 96px); font-weight: 300; line-height: 0.95; }
+        .page-title em { font-style: italic; color: var(--gold); }
+
+        /* FILTER */
+        .section-gallery { padding: 80px 60px 120px; background: var(--black); }
+        .filter-bar { display: flex; gap: 4px; margin-bottom: 60px; }
+        .filter-btn {
+            font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+            padding: 12px 28px; border: 1px solid rgba(255,255,255,0.12);
+            background: none; color: rgba(255,255,255,0.4);
+            cursor: none; transition: all 0.3s;
+        }
+        .filter-btn:hover { border-color: rgba(201,168,76,0.4); color: rgba(201,168,76,0.8); }
+        .filter-btn.active { background: var(--gold); color: var(--black); border-color: var(--gold); }
+
+        /* MASONRY-STYLE GRID */
+        .gallery-grid {
+            columns: 3;
+            column-gap: 4px;
+        }
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 4px;
+            position: relative;
+            overflow: hidden;
+            cursor: none;
+        }
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.33,1,0.68,1);
+        }
+        .gallery-item:hover img { transform: scale(1.06); }
+        .gallery-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
+            opacity: 0; transition: opacity 0.4s;
+            display: flex; align-items: flex-end;
+            padding: 24px;
+        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); }
+        .gallery-expand {
+            position: absolute; top: 16px; right: 16px;
+            width: 40px; height: 40px;
+            background: rgba(0,0,0,0.5); backdrop-filter: blur(8px);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--gold); font-size: 16px;
+            opacity: 0; transition: opacity 0.4s;
+        }
+        .gallery-item:hover .gallery-expand { opacity: 1; }
+
+        /* LIGHTBOX */
+        .lightbox {
+            position: fixed; inset: 0; z-index: 3000;
+            background: rgba(0,0,0,0.96);
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.4s;
+        }
+        .lightbox.open { opacity: 1; pointer-events: all; }
+        .lb-img-wrap {
+            position: relative; max-width: 80vw; max-height: 85vh;
+        }
+        .lb-img-wrap img {
+            max-width: 80vw; max-height: 85vh;
+            object-fit: contain;
+            transform: scale(0.95);
+            transition: transform 0.4s;
+        }
+        .lightbox.open .lb-img-wrap img { transform: scale(1); }
+        .lb-close { position: fixed; top: 32px; right: 40px; background: none; border: none; color: rgba(255,255,255,0.5); font-size: 28px; cursor: none; transition: color 0.3s; }
+        .lb-close:hover { color: var(--gold); }
+        .lb-prev, .lb-next { position: fixed; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; font-size: 20px; cursor: none; transition: all 0.3s; }
+        .lb-prev:hover, .lb-next:hover { border-color: var(--gold); color: var(--gold); }
+        .lb-prev { left: 32px; }
+        .lb-next { right: 32px; }
+        .lb-counter { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); font-size: 12px; letter-spacing: 3px; color: rgba(255,255,255,0.3); }
+
+        footer { background: var(--black); border-top: 1px solid rgba(201,168,76,0.15); padding: 80px 60px 40px; }
+        .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 60px; }
+        .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--gold); margin-bottom: 16px; }
+        .footer-desc { font-size: 13px; color: rgba(255,255,255,0.35); line-height: 1.8; max-width: 280px; }
+        .footer-heading { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .footer-links a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--gold); }
+        .footer-contact-item { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; }
+        .footer-contact-item span:first-child { color: var(--gold); min-width: 16px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 32px; display: flex; justify-content: space-between; align-items: center; }
+        .footer-copy { font-size: 12px; color: rgba(255,255,255,0.2); letter-spacing: 1px; }
+        .footer-socials { display: flex; gap: 16px; }
+        .social-link { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; transition: all 0.3s; }
+        .social-link:hover { border-color: var(--gold); color: var(--gold); }
+
+        .inquiry-fab { position: fixed; bottom: 40px; right: 40px; z-index: 500; }
+        .fab-btn { width: 60px; height: 60px; background: var(--gold); display: flex; align-items: center; justify-content: center; cursor: none; font-size: 22px; transition: all 0.3s; box-shadow: 0 8px 32px rgba(201,168,76,0.4); }
+        .fab-btn:hover { background: var(--gold-light); transform: scale(1.1); }
+        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); z-index: 2000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+        .modal-overlay.open { opacity: 1; pointer-events: all; }
+        .modal-box { background: var(--dark2); width: 520px; max-width: 95vw; padding: 56px 52px; border-top: 2px solid var(--gold); transform: translateY(30px); transition: transform 0.4s; position: relative; }
+        .modal-overlay.open .modal-box { transform: translateY(0); }
+        .modal-close { position: absolute; top: 24px; right: 28px; background: none; border: none; color: rgba(255,255,255,0.3); font-size: 20px; cursor: none; transition: color 0.3s; }
+        .modal-close:hover { color: var(--gold); }
+        .modal-eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+        .modal-title { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; margin-bottom: 36px; }
+        .form-group { margin-bottom: 20px; }
+        .form-label { display: block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 8px; }
+        .form-input { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--white); padding: 14px 16px; font-family: 'DM Sans', sans-serif; font-size: 14px; outline: none; transition: border-color 0.3s; }
+        .form-input:focus { border-color: var(--gold); }
+        .form-input::placeholder { color: rgba(255,255,255,0.2); }
+        .form-submit { width: 100%; background: var(--gold); color: var(--black); border: none; padding: 16px; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; cursor: none; margin-top: 8px; transition: all 0.3s; }
+        .form-submit:hover { background: var(--gold-light); }
+
+        @media (max-width: 1024px) {
+            nav { padding: 20px 30px; }
+            .page-hero { padding: 0 30px 60px; }
+            .section-gallery { padding: 60px 30px 80px; }
+            .gallery-grid { columns: 2; }
+            footer { padding: 60px 30px 30px; }
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+            .nav-links { display: none; }
+        }
+        @media (max-width: 600px) {
+            .gallery-grid { columns: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <nav>
+        <div class="nav-logo"><img src="img/logo.webp" alt="ABS Logo"> ABS <span>Dehradun</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="tel:+919759078323" class="nav-cta">Call Now</a>
     </nav>
 
-    <!-- HERO -->
-    <section class="pt-24 pb-8">
-        <div class="max-w-7xl mx-auto px-6">
-            <h1 class="text-4xl font-bold mb-2">Gallery</h1>
-            <p class="text-gray-600 mb-6">Explore our projects and premium properties.</p>
+    <section class="page-hero">
+        <div class="page-hero-line"></div>
+        <div>
+            <div class="page-eyebrow">Our Portfolio</div>
+            <h1 class="page-title"><em>Gallery</em> of<br>Excellence</h1>
+        </div>
+    </section>
 
-            <div class="flex flex-wrap gap-3 mb-6">
-                <button onclick="filterGallery('all')" class="px-4 py-2 rounded-full bg-amber-500 text-white">All</button>
-                <button onclick="filterGallery('residential')" class="px-4 py-2 rounded-full border border-amber-500 text-amber-500">Residential</button>
-                <button onclick="filterGallery('commercial')" class="px-4 py-2 rounded-full border border-amber-500 text-amber-500">Commercial</button>
-                <button onclick="filterGallery('luxury')" class="px-4 py-2 rounded-full border border-amber-500 text-amber-500">Luxury</button>
+    <section class="section-gallery">
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterGallery('all', this)">All</button>
+            <button class="filter-btn" onclick="filterGallery('residential', this)">Residential</button>
+            <button class="filter-btn" onclick="filterGallery('commercial', this)">Commercial</button>
+            <button class="filter-btn" onclick="filterGallery('luxury', this)">Luxury</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+            <div class="gallery-item" data-category="residential" onclick="openLb(0)">
+                <img src="img/areaplote.png" alt="Residential 1">
+                <div class="gallery-overlay"><span class="gallery-tag">Residential</span></div>
+                <div class="gallery-expand">⤢</div>
             </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4" id="galleryGrid">
-                <!-- images inserted by inline markup below; JS builds galleryImages array from these -->
-                <div class="gallery-item" data-category="residential"><button onclick="openLightboxByIndex(0)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80" class="w-full h-48 object-cover" alt="Residential 1"></button></div>
-                <div class="gallery-item" data-category="residential"><button onclick="openLightboxByIndex(1)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80" class="w-full h-48 object-cover" alt="Residential 2"></button></div>
-                <div class="gallery-item" data-category="residential"><button onclick="openLightboxByIndex(2)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" class="w-full h-48 object-cover" alt="Residential 3"></button></div>
-                <div class="gallery-item" data-category="residential"><button onclick="openLightboxByIndex(3)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1494696704231-cd4194ecbf43?w=800&q=80" class="w-full h-48 object-cover" alt="Residential 4"></button></div>
-
-                <div class="gallery-item" data-category="commercial"><button onclick="openLightboxByIndex(4)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" class="w-full h-48 object-cover" alt="Commercial 1"></button></div>
-                <div class="gallery-item" data-category="commercial"><button onclick="openLightboxByIndex(5)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1497366216548-11d1ab9bb79c?w=800&q=80" class="w-full h-48 object-cover" alt="Commercial 2"></button></div>
-                <div class="gallery-item" data-category="commercial"><button onclick="openLightboxByIndex(6)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1462353867552-fcd57e0c1f52?w=800&q=80" class="w-full h-48 object-cover" alt="Commercial 3"></button></div>
-
-                <div class="gallery-item" data-category="luxury"><button onclick="openLightboxByIndex(7)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" class="w-full h-48 object-cover" alt="Luxury 1"></button></div>
-                <div class="gallery-item" data-category="luxury"><button onclick="openLightboxByIndex(8)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1600566753086-00f18a6505f5?w=800&q=80" class="w-full h-48 object-cover" alt="Luxury 2"></button></div>
-                <div class="gallery-item" data-category="luxury"><button onclick="openLightboxByIndex(9)" class="group overflow-hidden rounded-lg w-full"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" class="w-full h-48 object-cover" alt="Luxury 3"></button></div>
+            <div class="gallery-item" data-category="luxury" onclick="openLb(1)">
+                <img src="img/dehradun.png" alt="Luxury 1">
+                <div class="gallery-overlay"><span class="gallery-tag">Luxury Home</span></div>
+                <div class="gallery-expand">⤢</div>
+            </div>
+            <div class="gallery-item" data-category="commercial" onclick="openLb(2)">
+                <img src="img/sampledesign.png" alt="Commercial 1">
+                <div class="gallery-overlay"><span class="gallery-tag">Commercial</span></div>
+                <div class="gallery-expand">⤢</div>
+            </div>
+            <div class="gallery-item" data-category="residential" onclick="openLb(3)">
+                <img src="img/sampleploting.png" alt="Residential 2">
+                <div class="gallery-overlay"><span class="gallery-tag">Residential</span></div>
+                <div class="gallery-expand">⤢</div>
+            </div>
+            <div class="gallery-item" data-category="luxury" onclick="openLb(4)">
+                <img src="img/rawplots.jpeg" alt="Luxury 2">
+                <div class="gallery-overlay"><span class="gallery-tag">Luxury Home</span></div>
+                <div class="gallery-expand">⤢</div>
+            </div>
+            <div class="gallery-item" data-category="commercial" onclick="openLb(5)">
+                <img src="img/plots.jpeg" alt="Commercial 2">
+                <div class="gallery-overlay"><span class="gallery-tag">Commercial</span></div>
+                <div class="gallery-expand">⤢</div>
+            </div>
+            <div class="gallery-item" data-category="luxury" onclick="openLb(7)">
+                <img src="img/amzingl.png" alt="Luxury 3">
+                <div class="gallery-overlay"><span class="gallery-tag">Luxury Villa</span></div>
+                <div class="gallery-expand">⤢</div>
+            </div>
+            <div class="gallery-item" data-category="commercial" onclick="openLb(8)">
+                <img src="img/loc.png" alt="Commercial 3">
+                <div class="gallery-overlay"><span class="gallery-tag">Office Space</span></div>
+                <div class="gallery-expand">⤢</div>
+            </div>
+            <div class="gallery-item" data-category="residential" onclick="openLb(9)">
+                <img src="img/mount.jpg" alt="Residential 4">
+                <div class="gallery-overlay"><span class="gallery-tag">Residential Plot</span></div>
+                <div class="gallery-expand">⤢</div>
             </div>
         </div>
     </section>
 
-    <!-- LIGHTBOX (single, controlled by JS) -->
-    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
-        <button aria-label="previous" id="lb-prev" class="absolute left-6 text-white text-4xl p-3" onclick="changeLightboxImage(-1)">❮</button>
-        <img id="lightbox-img" src="" alt="" class="max-w-4xl max-h-[85vh] rounded-lg shadow-2xl">
-        <button aria-label="next" id="lb-next" class="absolute right-6 text-white text-4xl p-3" onclick="changeLightboxImage(1)">❯</button>
-        <button aria-label="close" id="lb-close" class="absolute top-6 right-6 text-white text-3xl" onclick="closeLightbox()">✕</button>
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lb-close" onclick="closeLb()">✕</button>
+        <button class="lb-prev" onclick="changeLb(-1)">&#8592;</button>
+        <div class="lb-img-wrap">
+            <img id="lbImg" src="" alt="">
+        </div>
+        <button class="lb-next" onclick="changeLb(1)">&#8594;</button>
+        <div class="lb-counter" id="lbCounter"></div>
     </div>
 
-    <footer class="bg-gray-900 text-white py-12 mt-12">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <p class="text-gray-500">© 2024 Achiever Building Solution Pvt. Ltd. All Rights Reserved.</p>
+    <footer>
+        <div class="footer-top">
+            <div>
+                <div class="footer-brand">Achiever Building Solution</div>
+                <p class="footer-desc">Redefining real estate in Dehradun with integrity, transparency, and over 14 years of trusted expertise.</p>
+            </div>
+            <div>
+                <div class="footer-heading">Navigate</div>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-heading">Legal</div>
+                <ul class="footer-links">
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-heading">Services</div>
+                <ul class="footer-links">
+                    <li><a href="services.html">Residential Plots</a></li>
+                    <li><a href="services.html">Special Plots</a></li>
+                    <li><a href="services.html">Commercial Spaces</a></li>
+                    <li><a href="services.html">Investment Guidance</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-heading">Contact</div>
+                <div class="footer-contact-item"><span>✉</span><span>rehanqureshi0101@gmail.com</span></div>
+                <div class="footer-contact-item"><span>📱</span><span>+91 97590 78323, +91 82730 01688</span></div>
+                <div class="footer-contact-item"><span>�</span><span>WhatsApp: 8273001688</span></div>
+                <div class="footer-contact-item"><span>📍</span><span>52/66 Sewlakala, Shimla Bypass, Dehradun</span></div>
+            </div>
+            <div>
+                <div class="footer-heading">Social Media</div>
+                <ul class="footer-links">
+                    <li><a href="https://instagram.com/a.b.s_private_limited" target="_blank">Instagram: a.b.s_private_limited</a></li>
+                    <li><a href="https://www.facebook.com/absdehradun" target="_blank">Facebook: ABS Properties</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="footer-copy">© 2026 Achiever Building Solution Pvt. Ltd. All Rights Reserved.</span>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/absdehradun" class="social-link">f</a>
+                <a href="https://instagram.com" class="social-link">in</a>
+                <a href="https://youtube.com" class="social-link">▶</a>
+            </div>
         </div>
     </footer>
 
+    <div class="inquiry-fab">
+        <div class="fab-btn" onclick="openModal()">💬</div>
+    </div>
+    <div class="modal-overlay" id="modal" onclick="handleModalClick(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div class="modal-eyebrow">Get In Touch</div>
+            <h2 class="modal-title">Quick Inquiry</h2>
+            <form onsubmit="handleSubmit(event)">
+                <div class="form-group"><label class="form-label">Your Name</label><input type="text" class="form-input" placeholder="Full name" required></div>
+                <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" placeholder="your@email.com" required></div>
+                <div class="form-group"><label class="form-label">Phone</label><input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX"></div>
+                <div class="form-group"><label class="form-label">Message</label><textarea rows="3" class="form-input" placeholder="Tell us about your requirements..."></textarea></div>
+                <button type="submit" class="form-submit">Send Inquiry</button>
+            </form>
+        </div>
+    </div>
+
     <script>
-        // Build image array (keeps a single source of truth for lightbox)
-        const galleryImages = Array.from(document.querySelectorAll('#galleryGrid img')).map(img => img.src);
-        let currentImageIndex = 0;
+        const cursor = document.getElementById('cursor'); const ring = document.getElementById('cursorRing');
+        let mx=0,my=0,rx=0,ry=0;
+        document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cursor.style.left=mx-4+'px'; cursor.style.top=my-4+'px'; });
+        function animateRing(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx-16+'px';ring.style.top=ry-16+'px';requestAnimationFrame(animateRing);}
+        animateRing();
 
-        function openLightboxByIndex(index) {
-            currentImageIndex = index;
-            const lb = document.getElementById('lightbox');
-            const img = document.getElementById('lightbox-img');
-            img.src = galleryImages[index];
-            lb.classList.remove('hidden');
+        let currentIdx = 0;
+        const imgs = Array.from(document.querySelectorAll('#galleryGrid img')).map(i=>i.src);
+        function openLb(idx) {
+            currentIdx = idx;
+            document.getElementById('lbImg').src = imgs[idx];
+            document.getElementById('lbCounter').textContent = (idx+1) + ' / ' + imgs.length;
+            document.getElementById('lightbox').classList.add('open');
         }
-
-        function closeLightbox() {
-            const lb = document.getElementById('lightbox');
-            lb.classList.add('hidden');
-            document.getElementById('lightbox-img').src = '';
+        function closeLb() { document.getElementById('lightbox').classList.remove('open'); }
+        function changeLb(dir) {
+            currentIdx = (currentIdx+dir+imgs.length)%imgs.length;
+            document.getElementById('lbImg').src = imgs[currentIdx];
+            document.getElementById('lbCounter').textContent = (currentIdx+1)+' / '+imgs.length;
         }
+        document.addEventListener('keydown', e => {
+            if(document.getElementById('lightbox').classList.contains('open')) {
+                if(e.key==='ArrowLeft') changeLb(-1);
+                if(e.key==='ArrowRight') changeLb(1);
+                if(e.key==='Escape') closeLb();
+            }
+        });
+        document.getElementById('lightbox').addEventListener('click', e => { if(e.target===document.getElementById('lightbox')) closeLb(); });
 
-        function changeLightboxImage(direction) {
-            currentImageIndex = (currentImageIndex + direction + galleryImages.length) % galleryImages.length;
-            document.getElementById('lightbox-img').src = galleryImages[currentImageIndex];
-        }
-
-        function filterGallery(category) {
-            const items = document.querySelectorAll('.gallery-item');
-            items.forEach((item, idx) => {
-                if (category === 'all' || item.dataset.category === category) {
-                    item.style.display = '';
-                } else {
-                    item.style.display = 'none';
-                }
+        function filterGallery(cat, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.style.display = (cat==='all'||item.dataset.category===cat) ? '' : 'none';
             });
         }
 
-        // Close lightbox on background click
-        document.getElementById('lightbox').addEventListener('click', (e) => {
-            if (e.target.id === 'lightbox' || e.target.id === 'lb-close') closeLightbox();
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            const lb = document.getElementById('lightbox');
-            if (lb && !lb.classList.contains('hidden')) {
-                if (e.key === 'ArrowLeft') changeLightboxImage(-1);
-                if (e.key === 'ArrowRight') changeLightboxImage(1);
-                if (e.key === 'Escape') closeLightbox();
-            }
-        });
+        function openModal() { document.getElementById('modal').classList.add('open'); }
+        function closeModal() { document.getElementById('modal').classList.remove('open'); }
+        function handleModalClick(e) { if(e.target===document.getElementById('modal')) closeModal(); }
+        function handleSubmit(e) { e.preventDefault(); alert('Thank you! We\'ll be in touch shortly.'); closeModal(); }
     </script>
-
 </body>
 </html>

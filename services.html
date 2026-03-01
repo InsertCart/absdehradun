@@ -3,179 +3,398 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Achiever Building Solution</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-900 font-poppins">
+    <meta name="description" content="Explore residential plots, special plots, commercial spaces, and complete real estate services in Dehradun including legal documentation, financing, inspections, and support.">
+    <meta name="keywords" content="real estate services Dehradun, residential plots, special plots, commercial spaces, legal documentation, property inspection, bank liaison, investment guidance">
+    <meta name="author" content="Achiever Building Solution">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a0a">
 
-    <!-- NAVIGATION -->
-    <nav class="fixed w-full z-50 top-0 bg-white/95 backdrop-blur-md shadow-md">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tight">
-                <span class="text-amber-500">ABS</span> DEHRADUN
-            </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
-                <a href="index.html" class="text-gray-800 hover:text-amber-500 transition">Home</a>
-                <a href="about.html" class="text-gray-800 hover:text-amber-500 transition">About</a>
-                <a href="services.html" class="text-gray-800 hover:text-amber-500 transition font-bold">Services</a>
-                <a href="gallery.html" class="text-gray-800 hover:text-amber-500 transition">Gallery</a>
-                <a href="contact.html" class="text-gray-800 hover:text-amber-500 transition">Contact</a>
-            </div>
-            <a href="tel:+919759078323" class="bg-amber-500 text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-amber-600 transition transform hover:scale-105">CALL NOW</a>
-        </div>
+    <title>Services | Achiever Building Solution</title>
+    <link rel="canonical" href="services.html">
+
+    <meta property="og:title" content="Services | Achiever Building Solution">
+    <meta property="og:description" content="Explore residential plots, special plots, commercial spaces, and complete real estate services in Dehradun including legal documentation, financing, inspections, and support.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Achiever Building Solution">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:url" content="services.html">
+    <meta property="og:image" content="img/logo.webp">
+    <meta property="og:image:alt" content="Achiever Building Solution logo">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Services | Achiever Building Solution">
+    <meta name="twitter:description" content="Explore residential plots, special plots, commercial spaces, and complete real estate services in Dehradun including legal documentation, financing, inspections, and support.">
+    <meta name="twitter:image" content="img/logo.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/logo.webp">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --gold: #c9a84c; --gold-light: #e2c47a; --black: #0a0a0a; --dark: #111111; --dark2: #1a1a1a; --dark3: #222222; --white: #ffffff; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(--white); overflow-x: hidden; cursor: none; }
+        .cursor { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transition: transform 0.1s; }
+        .cursor-ring { width: 32px; height: 32px; border: 1px solid var(--gold); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; transition: all 0.15s ease; opacity: 0.6; }
+        nav { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 24px 60px; display: flex; align-items: center; justify-content: space-between; background: rgba(10,10,10,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(201,168,76,0.15); }
+        .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; display: flex; align-items: center; gap: 4px; }
+        .nav-logo img { height: 60px; }
+        .nav-links { display: flex; gap: 40px; list-style: none; }
+        .nav-links a { font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s; position: relative; }
+        .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        .nav-cta { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--black); background: var(--gold); padding: 12px 28px; text-decoration: none; font-weight: 500; transition: all 0.3s; }
+        .nav-cta:hover { background: var(--gold-light); }
+
+        .page-hero { min-height: 60vh; display: flex; align-items: flex-end; padding: 0 60px 80px; position: relative; overflow: hidden; background: var(--dark); }
+        .page-hero::before { content: 'SERVICES'; position: absolute; font-family: 'Cormorant Garamond', serif; font-size: 240px; font-weight: 700; color: rgba(255,255,255,0.02); top: 50%; left: 50%; transform: translate(-50%, -40%); white-space: nowrap; pointer-events: none; }
+        .page-hero-line { position: absolute; top: 0; left: 60px; width: 1px; height: 100%; background: linear-gradient(to bottom, transparent, rgba(201,168,76,0.3), transparent); }
+        .page-eyebrow { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; gap: 16px; }
+        .page-eyebrow::before { content: ''; width: 40px; height: 1px; background: var(--gold); }
+        .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(52px, 7vw, 96px); font-weight: 300; line-height: 0.95; }
+        .page-title em { font-style: italic; color: var(--gold); }
+
+        /* MAIN SERVICES */
+        .section-main { padding: 120px 60px; background: var(--black); }
+        .section-eyebrow { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+        .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px,4vw,60px); font-weight: 300; line-height: 1.1; margin-bottom: 72px; }
+        .section-title em { font-style: italic; color: var(--gold); }
+
+        .main-services { display: flex; flex-direction: column; gap: 2px; }
+        .ms-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 480px;
+            overflow: hidden;
+        }
+        .ms-card:nth-child(even) .ms-img { order: -1; }
+        .ms-img { position: relative; overflow: hidden; }
+        .ms-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.33,1,0.68,1); }
+        .ms-card:hover .ms-img img { transform: scale(1.05); }
+        .ms-img::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.3); }
+        .ms-content {
+            background: var(--dark2);
+            padding: 64px 56px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .ms-content::before {
+            content: '';
+            position: absolute; bottom: 0; left: 0;
+            width: 100%; height: 2px;
+            background: var(--gold);
+            transform: scaleX(0); transform-origin: left;
+            transition: transform 0.5s;
+        }
+        .ms-card:hover .ms-content::before { transform: scaleX(1); }
+        .ms-num { font-family: 'Cormorant Garamond', serif; font-size: 120px; font-weight: 300; color: rgba(201,168,76,0.04); position: absolute; bottom: -20px; right: 24px; line-height: 1; }
+        .ms-icon { font-size: 44px; margin-bottom: 28px; }
+        .ms-title { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 300; margin-bottom: 20px; line-height: 1.15; }
+        .ms-desc { font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.45); margin-bottom: 36px; max-width: 420px; }
+        .ms-features { display: flex; flex-direction: column; gap: 12px; }
+        .ms-feature { font-size: 13px; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 12px; }
+        .ms-feature::before { content: ''; width: 16px; height: 1px; background: var(--gold); }
+
+        /* ADDITIONAL SERVICES */
+        .section-add { padding: 120px 60px; background: var(--dark); }
+        .add-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 72px; }
+        .add-card { background: var(--dark2); padding: 48px 40px; transition: all 0.4s; position: relative; overflow: hidden; }
+        .add-card:hover { background: var(--dark3); }
+        .add-card::after { content: ''; position: absolute; left: 0; top: 0; width: 2px; height: 100%; background: var(--gold); transform: scaleY(0); transform-origin: top; transition: transform 0.4s; }
+        .add-card:hover::after { transform: scaleY(1); }
+        .add-icon { font-size: 36px; margin-bottom: 24px; display: block; }
+        .add-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; margin-bottom: 12px; }
+        .add-desc { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.4); }
+
+        /* CTA BAND */
+        .cta-band {
+            padding: 100px 60px;
+            background: var(--black);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid rgba(201,168,76,0.1);
+            gap: 40px;
+        }
+        .cta-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 60px); font-weight: 300; line-height: 1.15; max-width: 600px; }
+        .cta-text em { font-style: italic; color: var(--gold); }
+        .btn-gold { background: var(--gold); color: var(--black); padding: 20px 52px; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: all 0.3s; white-space: nowrap; }
+        .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+        footer { background: var(--black); border-top: 1px solid rgba(201,168,76,0.15); padding: 80px 60px 40px; }
+        .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 60px; }
+        .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--gold); margin-bottom: 16px; }
+        .footer-desc { font-size: 13px; color: rgba(255,255,255,0.35); line-height: 1.8; max-width: 280px; }
+        .footer-heading { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .footer-links a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--gold); }
+        .footer-contact-item { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; }
+        .footer-contact-item span:first-child { color: var(--gold); min-width: 16px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 32px; display: flex; justify-content: space-between; align-items: center; }
+        .footer-copy { font-size: 12px; color: rgba(255,255,255,0.2); letter-spacing: 1px; }
+        .footer-socials { display: flex; gap: 16px; }
+        .social-link { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; transition: all 0.3s; }
+        .social-link:hover { border-color: var(--gold); color: var(--gold); }
+
+        .inquiry-fab { position: fixed; bottom: 40px; right: 40px; z-index: 500; }
+        .fab-btn { width: 60px; height: 60px; background: var(--gold); display: flex; align-items: center; justify-content: center; cursor: none; font-size: 22px; transition: all 0.3s; box-shadow: 0 8px 32px rgba(201,168,76,0.4); }
+        .fab-btn:hover { background: var(--gold-light); transform: scale(1.1); }
+        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); z-index: 2000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+        .modal-overlay.open { opacity: 1; pointer-events: all; }
+        .modal-box { background: var(--dark2); width: 520px; max-width: 95vw; padding: 56px 52px; border-top: 2px solid var(--gold); transform: translateY(30px); transition: transform 0.4s; position: relative; }
+        .modal-overlay.open .modal-box { transform: translateY(0); }
+        .modal-close { position: absolute; top: 24px; right: 28px; background: none; border: none; color: rgba(255,255,255,0.3); font-size: 20px; cursor: none; transition: color 0.3s; }
+        .modal-close:hover { color: var(--gold); }
+        .modal-eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+        .modal-title { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; margin-bottom: 36px; }
+        .form-group { margin-bottom: 20px; }
+        .form-label { display: block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 8px; }
+        .form-input { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--white); padding: 14px 16px; font-family: 'DM Sans', sans-serif; font-size: 14px; outline: none; transition: border-color 0.3s; }
+        .form-input:focus { border-color: var(--gold); }
+        .form-input::placeholder { color: rgba(255,255,255,0.2); }
+        .form-submit { width: 100%; background: var(--gold); color: var(--black); border: none; padding: 16px; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; cursor: none; margin-top: 8px; transition: all 0.3s; }
+        .form-submit:hover { background: var(--gold-light); }
+
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.33,1,0.68,1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 1024px) {
+            nav { padding: 20px 30px; }
+            .page-hero { padding: 0 30px 60px; }
+            .section-main, .section-add, .cta-band { padding: 80px 30px; }
+            .ms-card { grid-template-columns: 1fr; min-height: auto; }
+            .ms-card:nth-child(even) .ms-img { order: 0; }
+            .ms-img { height: 300px; }
+            .ms-content { padding: 48px 36px; }
+            .add-grid { grid-template-columns: 1fr; }
+            .cta-band { flex-direction: column; align-items: flex-start; }
+            footer { padding: 60px 30px 30px; }
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <nav>
+        <div class="nav-logo"><img src="img/logo.webp" alt="ABS Logo"> ABS <span>Dehradun</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="tel:+919759078323" class="nav-cta">Call Now</a>
     </nav>
 
-    <!-- HERO -->
-    <section class="min-h-screen bg-gradient-to-br from-white via-gray-50 to-gray-100 flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-6">
-            <h1 class="text-5xl md:text-6xl font-bold mb-4">Our <span class="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">Services</span></h1>
-            <p class="text-gray-600 text-lg max-w-2xl">Comprehensive real estate solutions tailored to your needs.</p>
+    <section class="page-hero">
+        <div class="page-hero-line"></div>
+        <div>
+            <div class="page-eyebrow">What We Do</div>
+            <h1 class="page-title">Our <em>Services</em></h1>
         </div>
     </section>
 
-    <!-- SERVICES GRID -->
-    <section class="bg-white py-20">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-center text-3xl md:text-4xl font-bold mb-12">What We <span class="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">Offer</span></h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="p-8 rounded-xl shadow-lg bg-white">
-                    <div class="text-5xl mb-4">🏘️</div>
-                    <h3 class="text-xl font-semibold mb-3">Residential Plots</h3>
-                    <p class="text-gray-600 mb-4">Prime land in Sewlakala, Shimla Bypass, Selakui. Verified documents and flexible plans.</p>
-                    <ul class="text-gray-600 list-inside space-y-1">
-                        <li>✓ Clear documentation</li>
-                        <li>✓ Flexible payment</li>
-                        <li>✓ Prime locations</li>
-                    </ul>
+    <section class="section-main">
+        <div class="reveal">
+            <div class="section-eyebrow">Core Offerings</div>
+            <h2 class="section-title">Comprehensive <em>Real Estate</em><br>Solutions</h2>
+        </div>
+        <div class="main-services">
+            <div class="ms-card reveal">
+                <div class="ms-content">
+                    <span class="ms-num">01</span>
+                    <span class="ms-icon">🏘️</span>
+                    <div class="ms-title">Residential<br>Plots</div>
+                    <p class="ms-desc">Prime land parcels in Sewlakala, Shimla Bypass Road, and Selakui. Every plot comes with verified legal documentation and flexible payment options designed to make ownership accessible.</p>
+                    <div class="ms-features">
+                        <div class="ms-feature">Clear title & legal documentation</div>
+                        <div class="ms-feature">Flexible EMI payment plans</div>
+                        <div class="ms-feature">Developing prime locations</div>
+                        <div class="ms-feature">Bank-approved projects</div>
+                    </div>
                 </div>
-                <div class="p-8 rounded-xl shadow-lg bg-white">
-                    <div class="text-5xl mb-4">🏠</div>
-                    <h3 class="text-xl font-semibold mb-3">Luxury Homes</h3>
-                    <p class="text-gray-600 mb-4">Villas and modern apartments selected for quality and comfort.</p>
-                    <ul class="text-gray-600 list-inside space-y-1">
-                        <li>✓ Modern amenities</li>
-                        <li>✓ Design-led homes</li>
-                        <li>✓ Verified properties</li>
-                    </ul>
-                </div>
-                <div class="p-8 rounded-xl shadow-lg bg-white">
-                    <div class="text-5xl mb-4">🏢</div>
-                    <h3 class="text-xl font-semibold mb-3">Commercial Spaces</h3>
-                    <p class="text-gray-600 mb-4">Offices, retail and industrial land for businesses across Dehradun.</p>
-                    <ul class="text-gray-600 list-inside space-y-1">
-                        <li>✓ Strategic locations</li>
-                        <li>✓ Visibility & access</li>
-                        <li>✓ Negotiable terms</li>
-                    </ul>
+                <div class="ms-img">
+                    <img src="img/plots.jpeg" alt="Residential Plots">
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- ADDITIONAL SERVICES -->
-    <section class="bg-gray-50 py-20">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-center text-3xl font-bold mb-10">Additional <span class="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">Services</span></h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <div class="text-3xl mb-3">📋</div>
-                    <h4 class="font-semibold mb-2">Legal Documentation</h4>
-                    <p class="text-gray-600">Complete legal support and documentation assistance.</p>
+            <div class="ms-card reveal">
+                <div class="ms-img">
+                    <img src="img/rawplots.jpeg" alt="Special Plots">
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <div class="text-3xl mb-3">💳</div>
-                    <h4 class="font-semibold mb-2">Flexible Financing</h4>
-                    <p class="text-gray-600">Customized payment plans and financing options.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <div class="text-3xl mb-3">🔍</div>
-                    <h4 class="font-semibold mb-2">Property Inspection</h4>
-                    <p class="text-gray-600">Expert inspection and verification services.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <div class="text-3xl mb-3">🏦</div>
-                    <h4 class="font-semibold mb-2">Bank Liaison</h4>
-                    <p class="text-gray-600">Assistance with loans and mortgage approvals.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <div class="text-3xl mb-3">📚</div>
-                    <h4 class="font-semibold mb-2">Investment Guidance</h4>
-                    <p class="text-gray-600">Advice on real estate investment opportunities.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <div class="text-3xl mb-3">🤝</div>
-                    <h4 class="font-semibold mb-2">Post-Sale Support</h4>
-                    <p class="text-gray-600">Comprehensive support after purchase.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <h4 class="text-lg font-bold mb-4">About Us</h4>
-                    <p class="text-gray-400">Achiever Building Solution provides premium real estate solutions with integrity and transparency.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="about.html" class="hover:text-amber-500 transition">About</a></li>
-                        <li><a href="services.html" class="hover:text-amber-500 transition">Services</a></li>
-                        <li><a href="gallery.html" class="hover:text-amber-500 transition">Gallery</a></li>
-                        <li><a href="contact.html" class="hover:text-amber-500 transition">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Contact</h4>
-                    <p class="text-gray-400 mb-1">📧 rehanqureshi0101@gmail.com</p>
-                    <p class="text-gray-400 mb-1">📱 +91 9759078323</p>
-                    <p class="text-gray-400">📍 52/66 Sewlakala, Shimla Bypass Rd, Dehradun</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
-                    <div class="flex gap-3">
-                        <a href="https://facebook.com" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-amber-500 transition">f</a>
-                        <a href="https://instagram.com" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-amber-500 transition">📷</a>
-                        <a href="https://youtube.com" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-amber-500 transition">▶</a>
-                        <a href="https://linkedin.com" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-amber-500 transition">in</a>
+                <div class="ms-content">
+                    <span class="ms-num">02</span>
+                    <span class="ms-icon">📐</span>
+                    <div class="ms-title">Special<br>Plots</div>
+                    <p class="ms-desc">Exclusive land parcels selected for exceptional location, size, and development potential. Every plot comes with complete legal documentation and flexible payment options.</p>
+                    <div class="ms-features">
+                        <div class="ms-feature">Premium locations & sizes</div>
+                        <div class="ms-feature">Clear title & documentation</div>
+                        <div class="ms-feature">Fully verified & approved</div>
+                        <div class="ms-feature">High appreciation potential</div>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-700 pt-6 text-center">
-                <p class="text-gray-500">© 2024 Achiever Building Solution Pvt. Ltd. All Rights Reserved.</p>
+            <div class="ms-card reveal">
+                <div class="ms-content">
+                    <span class="ms-num">03</span>
+                    <span class="ms-icon">🏢</span>
+                    <div class="ms-title">Commercial<br>Spaces</div>
+                    <p class="ms-desc">Office complexes, retail outlets, and industrial land for businesses along key commercial corridors of Dehradun. High-visibility locations with excellent connectivity and infrastructure.</p>
+                    <div class="ms-features">
+                        <div class="ms-feature">Strategic high-visibility locations</div>
+                        <div class="ms-feature">Full infrastructure access</div>
+                        <div class="ms-feature">Negotiable lease & sale terms</div>
+                        <div class="ms-feature">Growth-corridor positioning</div>
+                    </div>
+                </div>
+                <div class="ms-img">
+                    <img src="img/areaplote.png" alt="Commercial Spaces">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-add">
+        <div class="reveal">
+            <div class="section-eyebrow">Beyond The Sale</div>
+            <h2 class="section-title">Additional <em>Support</em> Services</h2>
+        </div>
+        <div class="add-grid">
+            <div class="add-card reveal">
+                <span class="add-icon">📋</span>
+                <div class="add-title">Legal Documentation</div>
+                <p class="add-desc">Complete legal support — registry, NOCs, mutation, and documentation assistance throughout the process.</p>
+            </div>
+            <div class="add-card reveal">
+                <span class="add-icon">💳</span>
+                <div class="add-title">Flexible Financing</div>
+                <p class="add-desc">Customized payment plans and EMI options tailored to your financial situation and requirements.</p>
+            </div>
+            <div class="add-card reveal">
+                <span class="add-icon">🔍</span>
+                <div class="add-title">Property Inspection</div>
+                <p class="add-desc">Expert inspection and thorough verification services ensuring you invest with complete confidence.</p>
+            </div>
+            <div class="add-card reveal">
+                <span class="add-icon">🏦</span>
+                <div class="add-title">Bank Liaison</div>
+                <p class="add-desc">End-to-end assistance with home loan applications, mortgage approvals, and bank coordination.</p>
+            </div>
+            <div class="add-card reveal">
+                <span class="add-icon">📚</span>
+                <div class="add-title">Investment Guidance</div>
+                <p class="add-desc">Expert advice on real estate investment opportunities, market trends, and growth potential in Dehradun.</p>
+            </div>
+            <div class="add-card reveal">
+                <span class="add-icon">🤝</span>
+                <div class="add-title">Post-Sale Support</div>
+                <p class="add-desc">Comprehensive assistance after purchase — from possession to registration and beyond.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-band reveal">
+        <h2 class="cta-text">Ready to find your <em>perfect property</em> in Dehradun?</h2>
+        <a href="contact.html" class="btn-gold">Get In Touch</a>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <div>
+                <div class="footer-brand">Achiever Building Solution</div>
+                <p class="footer-desc">Redefining real estate in Dehradun with integrity, transparency, and over 14 years of trusted expertise.</p>
+            </div>
+            <div>
+                <div class="footer-heading">Navigate</div>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-heading">Legal</div>
+                <ul class="footer-links">
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-heading">Services</div>
+                <ul class="footer-links">
+                    <li><a href="#">Residential Plots</a></li>
+                    <li><a href="#">Special Plots</a></li>
+                    <li><a href="#">Commercial Spaces</a></li>
+                    <li><a href="#">Investment Guidance</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-heading">Contact</div>
+                <div class="footer-contact-item"><span>✉</span><span>rehanqureshi0101@gmail.com</span></div>
+                <div class="footer-contact-item"><span>📱</span><span>+91 97590 78323, +91 82730 01688</span></div>
+                <div class="footer-contact-item"><span>�</span><span>WhatsApp: 8273001688</span></div>
+                <div class="footer-contact-item"><span>📍</span><span>52/66 Sewlakala, Shimla Bypass, Dehradun</span></div>
+            </div>
+            <div>
+                <div class="footer-heading">Social Media</div>
+                <ul class="footer-links">
+                    <li><a href="https://instagram.com/a.b.s_private_limited" target="_blank">Instagram: a.b.s_private_limited</a></li>
+                    <li><a href="https://www.facebook.com/absdehradun" target="_blank">Facebook: ABS Properties</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="footer-copy">© 2026 Achiever Building Solution Pvt. Ltd. All Rights Reserved.</span>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/absdehradun" class="social-link">f</a>
+                <a href="https://instagram.com" class="social-link">in</a>
+                <a href="https://youtube.com" class="social-link">▶</a>
             </div>
         </div>
     </footer>
 
-    <!-- FLOATING INQUIRY BUTTON -->
-    <div onclick="openInquiryModal()" class="fixed bottom-8 right-8 w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center text-3xl cursor-pointer shadow-2xl hover:bg-amber-600 hover:scale-110 transition z-40" title="Inquire Now">💬</div>
+    <div class="inquiry-fab">
+        <div class="fab-btn" onclick="openModal()">💬</div>
+    </div>
 
-    <!-- INQUIRY MODAL -->
-    <div class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" id="inquiryModal">
-        <div class="bg-white rounded-xl shadow-2xl p-8 max-w-md w-11/12 mx-6">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold text-gray-900">Quick Inquiry</h2>
-                <button onclick="closeInquiryModal()" class="text-3xl text-gray-500 hover:text-amber-500 transition">✕</button>
-            </div>
-            <form class="space-y-4">
-                <input type="text" placeholder="Your Name" class="w-full bg-gray-100 border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-amber-500 transition" required>
-                <input type="email" placeholder="Email Address" class="w-full bg-gray-100 border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-amber-500 transition" required>
-                <input type="tel" placeholder="Phone Number" class="w-full bg-gray-100 border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-amber-500 transition" required>
-                <textarea rows="4" placeholder="Your Message" class="w-full bg-gray-100 border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:border-amber-500 transition"></textarea>
-                <button type="submit" class="w-full bg-amber-500 text-white font-bold py-3 rounded-lg hover:bg-amber-600 transition">SUBMIT INQUIRY</button>
+    <div class="modal-overlay" id="modal" onclick="handleModalClick(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div class="modal-eyebrow">Get In Touch</div>
+            <h2 class="modal-title">Quick Inquiry</h2>
+            <form onsubmit="handleSubmit(event)">
+                <div class="form-group"><label class="form-label">Your Name</label><input type="text" class="form-input" placeholder="Full name" required></div>
+                <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" placeholder="your@email.com" required></div>
+                <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX"></div>
+                <div class="form-group"><label class="form-label">Message</label><textarea rows="3" class="form-input" placeholder="Tell us about your requirements..."></textarea></div>
+                <button type="submit" class="form-submit">Send Inquiry</button>
             </form>
         </div>
     </div>
 
     <script>
-        function openInquiryModal() { document.getElementById('inquiryModal').classList.remove('hidden'); }
-        function closeInquiryModal() { document.getElementById('inquiryModal').classList.add('hidden'); }
-        window.onclick = function(event) { const modal = document.getElementById('inquiryModal'); if (event.target == modal) modal.classList.add('hidden'); }
+        const cursor = document.getElementById('cursor'); const ring = document.getElementById('cursorRing');
+        let mx = 0, my = 0, rx = 0, ry = 0;
+        document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cursor.style.left = mx - 4 + 'px'; cursor.style.top = my - 4 + 'px'; });
+        function animateRing() { rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12; ring.style.left = rx - 16 + 'px'; ring.style.top = ry - 16 + 'px'; requestAnimationFrame(animateRing); }
+        animateRing();
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+        reveals.forEach(el => observer.observe(el));
+        function openModal() { document.getElementById('modal').classList.add('open'); }
+        function closeModal() { document.getElementById('modal').classList.remove('open'); }
+        function handleModalClick(e) { if (e.target === document.getElementById('modal')) closeModal(); }
+        function handleSubmit(e) { e.preventDefault(); alert('Thank you! We\'ll be in touch shortly.'); closeModal(); }
     </script>
-
 </body>
 </html>
